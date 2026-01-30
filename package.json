@@ -1,0 +1,57 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "wrap-text",
+  "title": "Wrap Text",
+  "description": "Wrap clipboard or selected text in XML-like tags",
+  "icon": "command-icon.png",
+  "author": "jurrejan",
+  "categories": ["Developer Tools"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "wrap-clipboard",
+      "title": "Wrap Clipboard",
+      "description": "Wrap clipboard content in XML-like tags",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "tag",
+          "type": "text",
+          "placeholder": "Tag name",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "wrap-in-place",
+      "title": "Wrap In Place",
+      "description": "Wrap selected text in XML-like tags in place",
+      "mode": "no-view",
+      "arguments": [
+        {
+          "name": "tag",
+          "type": "text",
+          "placeholder": "Tag name",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.0",
+    "@raycast/utils": "^1.17.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.3.3",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint"
+  }
+}
